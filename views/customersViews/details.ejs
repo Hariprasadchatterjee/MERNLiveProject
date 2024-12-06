@@ -1,0 +1,74 @@
+<%- include("../partials/header.ejs")%>
+</head>
+<%- include("../partials/nav.ejs")%>
+<body>
+  <section class="w-full bg-center bg-cover h-96" style="background-image: url('<%=product.image %>');">
+  </section>
+  
+
+  <!-- Home Details -->
+  <main class="max-w-5xl px-4 mx-auto mt-8">
+    <div class="p-6 bg-white rounded-lg shadow">
+      <h2 class="mb-4 text-3xl font-semibold text-gray-800"><%=product.houseName %></h2>
+ 
+      <div class="mt-4">
+        <a href="/customer/rules/<%=product._id %>">Rules</a>
+      </div>
+      
+      <!-- Amenities -->
+      <h3 class="mb-4 text-xl font-semibold text-gray-800"><%=product.location %></h3>
+      <ul class="grid grid-cols-2 gap-4 mb-6 md:grid-cols-3">
+        <li class="flex items-center">
+          <span class="p-2 mr-2 text-green-600 bg-green-100 rounded-full"><i class="fas fa-wifi"></i></span> WiFi
+        </li>
+        <li class="flex items-center">
+          <span class="p-2 mr-2 text-blue-600 bg-blue-100 rounded-full"><i class="fas fa-car"></i></span> Free Parking
+        </li>
+        <li class="flex items-center">
+          <span class="p-2 mr-2 text-yellow-600 bg-yellow-100 rounded-full"><i class="fas fa-hot-tub"></i></span> Hot Tub
+        </li>
+        <li class="flex items-center">
+          <span class="p-2 mr-2 text-red-600 bg-red-100 rounded-full"><i class="fas fa-utensils"></i></span> Kitchen
+        </li>
+        <li class="flex items-center">
+          <span class="p-2 mr-2 text-purple-600 bg-purple-100 rounded-full"><i class="fas fa-paw"></i></span> Pet Friendly
+        </li>
+        <li class="flex items-center">
+          <span class="p-2 mr-2 text-pink-600 bg-pink-100 rounded-full"><i class="fas fa-tv"></i></span> TV
+        </li>
+      </ul>
+
+      <!-- Host Info -->
+      <div class="flex items-center pt-6 mt-6 border-t border-gray-200">
+        <img src="https://source.unsplash.com/random/64x64?person" alt="Host" class="w-16 h-16 mr-4 rounded-full">
+        <div>
+          <p class="text-lg font-semibold text-gray-800">Hosted by Jane Doe</p>
+          <p class="text-gray-600">Joined in 2020</p>
+        </div>
+      </div>
+
+      <!-- Reviews -->
+      <div class="mt-8">
+        <h3 class="mb-4 text-xl font-semibold text-gray-800">Reviews</h3>
+        <div class="space-y-4">
+          <div class="flex items-start space-x-4">
+            <img src="https://source.unsplash.com/random/48x48?person" alt="User" class="w-12 h-12 rounded-full">
+            <div>
+              <p class="font-semibold text-gray-800">John Doe</p>
+              <p class="text-sm text-gray-600">"Had an amazing stay! The cabin was beautiful and the views were incredible."</p>
+            </div>
+          </div>
+          <div class="flex items-start space-x-4">
+            <img src="https://source.unsplash.com/random/48x48?person" alt="User" class="w-12 h-12 rounded-full">
+            <div>
+              <p class="font-semibold text-gray-800">Sarah Smith</p>
+              <p class="text-sm text-gray-600">"Perfect getaway spot! Everything was as described and very clean."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<header>
+  <nav class="flex items-center justify-start gap-2 text-white bg-slate-500">
+    <div class="homeBtn">
+      <button class="text-2xl"> <a href="/">Home > </a> </button>
+    </div>
+    <div class="flex items-center justify-center gap-4 Addbtn">
+      <% if(isLogedIn){ %>
+        <% if(user.userType==="guest"){ %>
+    
+      <button> <a href="/customer/Home">Home list</a> </button>
+      <button> <a href="/customer/favourite">Favorite</a> </button>
+        <%} else {%>
+      <button> <a href="/host/add-edit-Home">Add Product</a> </button>
+      <button> <a href="/host/host-homelist">Host Homelist</a> </button>
+      
+      <%}%>
+      <%}%>
+
+      <% if(isLogedIn){ %>
+        <form action="/logout" method="post">
+          <input type="submit" value="logout">
+        </form>
+      <%} else {%>
+     
+      <button> <a href="/login">Log In</a> </button>
+      <button> <a href="/register">Register</a> </button>
+      <%} %>
+    </div>
+  </nav>
+</header>
